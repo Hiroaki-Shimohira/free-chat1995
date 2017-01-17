@@ -1,0 +1,36 @@
+.chat
+  .chat-side
+    .chat-user
+      %h5=@user.name
+      .chat-user__actions
+        / ↓歯車とかのロゴ
+        =link_to new_chat_group_path, class: "chat-user__action" do
+          =icon('pencil-square-o')
+        =link_to edit_user_registration_path, class: "chat-user__action" do
+          =icon('cog')
+    %ul.chat-groups
+      -@chat_groups.each do |chat_group|
+        %li.chat-group
+          =link_to chat_group_messages_path(chat_group.id), class: "chat-group__link" do
+            %p.chat-group__name
+              =chat_group.name
+            %p.chat-group__massage hellow
+  .chat-main
+    .chat-header
+      .chat-header--left
+        %h2=@chat_group.name
+        %p.chat-header__users
+          %span.chat-header__user shimo
+      .chat-header--right
+        .chat-header__edit-btn=link_to 'edit', edit_chat_group_path(@chat_group)
+    .chat-body
+      %ul.chat-messages
+        =render @messages
+    .chat-footer
+      = form_for [@chat_group, @message], class: 'js-form clearfix' do |f|
+        .chat-footer__body
+          = f.text_area :body, row: 1, placeholder: 'type a message'
+          %label.chat-footer__file
+            = f.file_field :image
+            =icon('image')
+        = f.submit 'Send'

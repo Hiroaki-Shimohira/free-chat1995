@@ -1,0 +1,15 @@
+@import "./reset";
+@import "./user";
+@import "./group";
+@import "./config/variable";
+@import "./mixin/clearfix";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "./modules/flash_messages";
+
+.chat{
+  min-width:980px;
+  height: 100vh;
+}
+@import "./modules/chat-side";
+@import "./modules/chat-main";
