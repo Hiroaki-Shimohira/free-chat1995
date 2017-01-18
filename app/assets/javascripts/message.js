@@ -62,7 +62,7 @@ $(function(){
   });
 
   //チャットのため自動更新機能
-  if(location.pathname.match(/chat_groups\/\d+\/messages/)){
+  if(document.location.href.match(/\/chat_groups\/\d+\/messages/)){
     setInterval(function(){
       $.ajax({
         type: 'GET',

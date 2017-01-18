@@ -2,13 +2,13 @@ class ChatGroupsController < ApplicationController
   before_action :authenticate_user!
   def index
     @chat_groups = current_user.chat_groups
-    @user = current_user
   end
 
   def new
     @chat_group = ChatGroup.new
   end
   def create
+    binding.pry
     @chat_group = ChatGroup.new(chat_group_params)
     if @chat_group.save
        redirect_to root_path, notice: 'グループが作成されました。'
@@ -18,12 +18,9 @@ class ChatGroupsController < ApplicationController
 
   end
   def show
-    @chat_groups = current_user.chat_groups
-    render :index
   end
 
   def edit
-    @chat_group = ChatGroup.find(params[:id])
   end
 
   def update
