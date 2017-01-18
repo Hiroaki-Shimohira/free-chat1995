@@ -1,8 +1,6 @@
 class MessagesController < ApplicationController
   def index
-    @message = Message.new
     @chat_groups = current_user.chat_groups
-    @user = current_user
     @chat_group = ChatGroup.find(params[:chat_group_id])
 
     @message = Message.new
@@ -16,11 +14,10 @@ class MessagesController < ApplicationController
 
   def create
     @messages = Message.where(chat_group_id: params[:chat_group_id])
-    @chat_group = ChatGroup.find(params[:chat_group_id])
     @message = current_user.messages.new(message_params)
-    if @message.save(@chat_group)
+    if @message.save
       respond_to do |format|
-        format.html{redirect_to :back, notice: "成功"}
+        format.html{redirect_to :back}
         format.json{render json: @message}
       end
     else
