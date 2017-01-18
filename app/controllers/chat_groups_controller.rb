@@ -8,7 +8,6 @@ class ChatGroupsController < ApplicationController
     @chat_group = ChatGroup.new
   end
   def create
-    binding.pry
     @chat_group = ChatGroup.new(chat_group_params)
     if @chat_group.save
        redirect_to root_path, notice: 'グループが作成されました。'
