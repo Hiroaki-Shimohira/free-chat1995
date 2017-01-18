@@ -1,0 +1,5 @@
+"id","name","email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","sign_in_count","current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","created_at","updated_at"
+1,"eeee","eeee@eeee","$2a$11$5UruO7FcM8kJOIewxFvis.B2IUCEzx2kTvqDIbF3BjYRnKwvCNVE6",NULL,NULL,NULL,3,"2017-01-18 01:50:18","2017-01-17 23:51:11","::1","::1","2017-01-12 14:59:09","2017-01-18 01:50:18"
+2,"rrrr","rrrr@rrrr","$2a$11$6ojRUZON8MpyS6kKVFD1BOjDJYdZ.ji15eBsyP.XFGioSqaE33DPO",NULL,NULL,NULL,2,"2017-01-17 23:05:22","2017-01-12 14:59:43","::1","::1","2017-01-12 14:59:43","2017-01-17 23:05:22"
+3,"jiji","jiji@jiji","$2a$11$wj20z4D6laiB8GxfUqRDgeL3OXHuh0CxQA3UagH3BpoH//d20/nE.",NULL,NULL,NULL,1,"2017-01-15 04:12:03","2017-01-15 04:12:03","::1","::1","2017-01-15 04:12:03","2017-01-15 04:12:03"
+4,"ttt","ttt@ttt","$2a$11$sKjCGrlVMGPJmzHX4NG14eb8bMJLvRchdI0MJySK6bt73mCU.Xiq6",NULL,NULL,NULL,1,"2017-01-17 05:33:03","2017-01-17 05:33:03","::1","::1","2017-01-17 05:33:03","2017-01-17 05:33:03"
