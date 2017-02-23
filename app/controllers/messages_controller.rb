@@ -6,24 +6,24 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @chat_group.messages
 
-    respond_to do |format|
-      format.html { render :index }
-      format.json { render json: @chat_group.messages }
-    end
+    # respond_to do |format|
+    #   format.html { render :index }
+    #   format.json { render json: @chat_group.messages }
+    # end
   end
 
-  def create
-    @messages = Message.where(chat_group_id: params[:chat_group_id])
-    @message = current_user.messages.new(message_params)
-    if @message.save
-      respond_to do |format|
-        format.html{redirect_to :back}
-        format.json{render json: @message}
-      end
-    else
-      redirect_to root_path, notice: "失敗"
-    end
-  end
+  # def create
+  # #   @messages = Message.where(chat_group_id: params[:chat_group_id])
+  # #   @message = current_user.messages.new(message_params)
+  # #   if @message.save
+  # #     respond_to do |format|
+  # #       format.html{redirect_to :back}
+  # #       format.json{render json: @message}
+  # #     end
+  # #   else
+  # #     redirect_to root_path, notice: "失敗"
+  # #   end
+  # end
 
   private
   def message_params
